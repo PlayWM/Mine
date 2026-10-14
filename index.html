@@ -1229,7 +1229,7 @@ class Player {
     const reduction = 1.0 / (1.0 + (statVal - 1) * reductionFactor);
     let base = CONFIG.BASE_FIRE_INTERVAL;
     if (this.pType === 2) base *= 0.85;
-    if (this.pType === 0) base *= 1.30; // 파워형(pType === 1) 제외, 미사일형만 유지
+    if (this.pType === 0) base *= 1.00; // 파워형(pType === 1) 제외, 미사일형만 유지
     if (this.pType === 4 || this.name === "Legend") base *= 0.70;
     return Math.max(0.10, base * reduction);
   }
